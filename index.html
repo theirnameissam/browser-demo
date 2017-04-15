@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Browser</title>
+    <link rel="stylesheet" href="css/css/font-awesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+          webview {
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+  </head>
+  <body id="browser">
+    <nav id="navigation">
+      <div id="back">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </div>
+      <div id="forward">
+        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </div>
+      <div id="refresh">
+        <i class="fa fa-refresh" aria-hidden="true"></i>
+      </div>
+      <div id="omnibox">
+        <input type="text" id="url">
+      </div>
+      <div id="fave">
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+      <div id="fave-popup" data-state="closed">
+      </div>
+      <div id="list">
+        <i class="fa fa-list" aria-hidden="true"></i>
+      </div>
+      <div id="console">
+        <i class="fa fa-terminal" aria-hidden="true"></i>
+      </div>
+    </nav>
+    <!--<div id="tabs">
+      <a class="tab">Titlegekn ekjng eknjg kegn engk 
+        <div class="close">
+          <i class="fa fa-times"></i>
+        </div>
+      </a>
+        <a class="tab">Titlegekn ekjng eknjg kegn engk 
+        <div class="close">
+          <i class="fa fa-times"></i>
+        </div>
+      </a>
+            <a class="tab">Titlegekn ekjng eknjg kegn engk 
+        <div class="close">
+          <i class="fa fa-times"></i>
+        </div>
+      </a>
+    </div>-->
+      <div id="views">
+        <webview id="view" class="page" src="http://www.google.com/" autosize="on"></webview>
+      </div>
+  <script>
+    // You can also require other files to run in this process
+    require('./renderer.js')
+  </script>
+</html>
